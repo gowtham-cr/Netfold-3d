@@ -1,0 +1,48 @@
+# Dependencies & Build Outputs
+node_modules/
+dist/
+dist-ssr/
+
+# Environment & Secret Files (keep .env.example tracked)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*credentials*.json
+*service-account*.json
+.secrets/
+
+# Local TTS Model Weights, Audio Caches & Python Bytecode
+.tts-models/
+.tts-cache/
+__pycache__/
+*.py[cod]
+
+# Logs & Temporary Files
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.local
+.tmp/
+tmp/
+
+# Local Tooling / Machine-Specific Files
+.agents/
+.archify/
+skills-lock.json
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

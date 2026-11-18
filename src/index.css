@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+:root {
+  --nf-bg: #f1f5f9;
+  --nf-surface: #ffffff;
+  --nf-surface-muted: #f8fafc;
+  --nf-text: #0f172a;
+  --nf-text-muted: #475569;
+  --nf-border: #e2e8f0;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+  --nf-bg: #0b1120;
+  --nf-surface: #111827;
+  --nf-surface-muted: #1e293b;
+  --nf-text: #f1f5f9;
+  --nf-text-muted: #94a3b8;
+  --nf-border: #334155;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--nf-bg);
+  color: var(--nf-text);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+/* Crisp visible focus indicator for keyboard navigation across all interactive controls */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 2px;
+}
+
+html.dark button:focus-visible,
+html.dark a:focus-visible,
+html.dark input:focus-visible,
+html.dark select:focus-visible,
+html.dark textarea:focus-visible,
+html.dark [tabindex]:focus-visible {
+  outline-color: #818cf8;
+}
+
+/* Unified Dark Theme SaaS Surface System */
+html.dark .bg-white,
+html.dark .bg-white\/95,
+html.dark .bg-white\/90,
+html.dark .bg-white\/85,
+html.dark .bg-white\/80,
+html.dark .bg-white\/60 {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-slate-50,
+html.dark [class*="bg-slate-50/"] {
+  background-color: #172033 !important;
+}
+
+html.dark .bg-slate-100,
+html.dark [class*="bg-slate-100/"] {
+  background-color: #0f172a !important;
+}
+
+html.dark .bg-slate-200,
+html.dark [class*="bg-slate-200/"] {
+  background-color: #1e293b !important;
+}
+
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-600,
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .border-slate-200,
+html.dark [class*="border-slate-200/"],
+html.dark .border-slate-100,
+html.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+html.dark .ring-slate-200,
+html.dark [class*="ring-slate-200/"] {
+  --tw-ring-color: #334155 !important;
+}
+
+html.dark .bg-indigo-50,
+html.dark [class*="bg-indigo-50/"] {
+  background-color: rgba(49, 46, 129, 0.35) !important;
+}
+
+html.dark .text-indigo-700,
+html.dark .text-indigo-800,
+html.dark .text-indigo-900,
+html.dark .text-indigo-950 {
+  color: #a5b4fc !important;
+}
+
+html.dark .border-indigo-200,
+html.dark .border-indigo-100 {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+}
+
+html.dark .bg-sky-50,
+html.dark [class*="bg-sky-50/"] {
+  background-color: rgba(12, 74, 110, 0.35) !important;
+}
+
+html.dark .text-sky-700,
+html.dark .text-sky-800,
+html.dark .text-sky-900 {
+  color: #7dd3fc !important;
+}
+
+html.dark .border-sky-200,
+html.dark .border-sky-300 {
+  border-color: rgba(56, 189, 248, 0.35) !important;
+}
+
+html.dark .bg-emerald-50,
+html.dark [class*="bg-emerald-50/"],
+html.dark .bg-emerald-100,
+html.dark [class*="bg-emerald-100/"] {
+  background-color: rgba(6, 78, 59, 0.38) !important;
+}
+
+html.dark .text-emerald-700,
+html.dark .text-emerald-800,
+html.dark .text-emerald-900 {
+  color: #6ee7b7 !important;
+}
+
+html.dark .border-emerald-200,
+html.dark .border-emerald-300 {
+  border-color: rgba(16, 185, 129, 0.45) !important;
+}
+
+html.dark .bg-rose-50,
+html.dark [class*="bg-rose-50/"],
+html.dark .bg-rose-100 {
+  background-color: rgba(136, 19, 55, 0.35) !important;
+}
+
+html.dark .text-rose-700,
+html.dark .text-rose-800,
+html.dark .text-rose-900 {
+  color: #fda4af !important;
+}
+
+html.dark .border-rose-200,
+html.dark .border-rose-300 {
+  border-color: rgba(244, 63, 94, 0.45) !important;
+}
+
+html.dark .bg-indigo-100 {
+  background-color: rgba(55, 48, 163, 0.45) !important;
+}
+
+html.dark .bg-amber-50,
+html.dark [class*="bg-amber-50/"],
+html.dark .bg-amber-100,
+html.dark [class*="bg-amber-100/"] {
+  background-color: rgba(120, 53, 15, 0.35) !important;
+}
+
+html.dark .text-amber-700,
+html.dark .text-amber-800,
+html.dark .text-amber-900,
+html.dark .text-amber-950 {
+  color: #fcd34d !important;
+}
+
+html.dark .border-amber-200,
+html.dark .ring-amber-200\/80,
+html.dark .ring-amber-300 {
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  --tw-ring-color: rgba(245, 158, 11, 0.4) !important;
+}
+
+html.dark .bg-gradient-to-r {
+  background-image: linear-gradient(to right, rgba(49, 46, 129, 0.4), #111827, rgba(12, 74, 110, 0.35)) !important;
+}
+
+/* Honeycomb subtle geometric grid + glowing neon 3D infinity accent */
+.nf-honeycomb-dark {
+  background-color: #090f1f;
+  background-image: radial-gradient(
+      circle at 50% 0%,
+      rgba(34, 211, 238, 0.14),
+      transparent 55%
+    ),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 98' fill='none' stroke='%2322d3ee' stroke-opacity='0.12' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.nf-honeycomb-surface {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 98' fill='none' stroke='%236366f1' stroke-opacity='0.055' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+html.dark .nf-honeycomb-surface {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='98' viewBox='0 0 56 98'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 98' fill='none' stroke='%2322d3ee' stroke-opacity='0.09' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.nf-infinity-glow {
+  filter: drop-shadow(0 0 14px rgba(34, 211, 238, 0.55))
+    drop-shadow(0 0 28px rgba(129, 140, 248, 0.35));
+}
+
+.nf-neon-panel {
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.14),
+    0 24px 48px rgba(2, 6, 23, 0.65);
+}
+
+/* Keep SVG diagrams readable on crisp bright canvas paper even in Dark Mode */
+html.dark figure svg {
+  background-color: #f8fafc;
+  border-radius: 0.75rem;
+}
+
+@media print {
+  .no-print,
+  header {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
